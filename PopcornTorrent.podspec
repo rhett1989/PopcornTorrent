@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
   s.platform      = :tvos, '9.0'
   s.requires_arc  = true
 
-  s.source_files  = 'PopcornTorrent/PopcornTorrent/include/*.{h}', 'PopcornTorrent/PopcornTorrent/libtorrent/*.{c,cpp}', 'PopcornTorrent/**/*.{h,hpp}', 'PopcornTorrent/**/*.{m,mm}'
+  s.source_files  = 'PopcornTorrent/**/*.{m,mm,c,cpp}', 'PopcornTorrent/**/*.{h,hpp}'
+  s.source_files = 'PopcornTorrent/PopcornTorrent/**/*.{c,cpp}', 'PopcornTorrent/PopcornTorrent/include/**/*.{h,hpp}'
 
   s.module_name   = 'PopcornTorrent'
 end
