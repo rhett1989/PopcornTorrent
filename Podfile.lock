@@ -1,0 +1,38 @@
+PODS:
+  - boost (1.0.0)
+  - boostfilesystem (1.0.0):
+    - boost
+  - libtorrent (1.0.0):
+    - boost
+    - boostfilesystem
+
+DEPENDENCIES:
+  - boost (from `https://github.com/PopcornTimeTV/Boost.git`)
+  - boostfilesystem (from `https://github.com/PopcornTimeTV/Boost-Filesystem.git`)
+  - libtorrent (from `https://github.com/PopcornTimeTV/libtorrent.git`)
+
+EXTERNAL SOURCES:
+  boost:
+    :git: https://github.com/PopcornTimeTV/Boost.git
+  boostfilesystem:
+    :git: https://github.com/PopcornTimeTV/Boost-Filesystem.git
+  libtorrent:
+    :git: https://github.com/PopcornTimeTV/libtorrent.git
+
+CHECKOUT OPTIONS:
+  boost:
+    :commit: c7c7733f5d958e71047563d4ccc99e03f828a42f
+    :git: https://github.com/PopcornTimeTV/Boost.git
+  boostfilesystem:
+    :commit: efedab2cf418379c30efbd93b4f97259d23d9491
+    :git: https://github.com/PopcornTimeTV/Boost-Filesystem.git
+  libtorrent:
+    :commit: 7a0a1df5f22555d526920e21f4c8ca659ccd41b9
+    :git: https://github.com/PopcornTimeTV/libtorrent.git
+
+SPEC CHECKSUMS:
+  boost: afd117e091804c289141e6b3ef33b765a1101feb
+  boostfilesystem: 81132024835b4b9c639e7b7b44a2f5e6d92f3cca
+  libtorrent: 379004cd102836dd71803363a826457630631872
+
+COCOAPODS: 0.39.0

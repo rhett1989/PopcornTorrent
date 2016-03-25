@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EB27AFFC7F8C1522F8B6DC9 /* libPods-PopcornTorrentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278C59032078B4436AC170B5 /* libPods-PopcornTorrentTests.a */; };
+		6E5392DF8900FF49567F1FC3 /* libPods-PopcornTorrent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F7BA1C399C90EBC79C6BC0 /* libPods-PopcornTorrent.a */; };
 		922F43361CA37CF800955B33 /* PopcornTorrent.h in Headers */ = {isa = PBXBuildFile; fileRef = 922F43351CA37CF800955B33 /* PopcornTorrent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		922F433D1CA37CF800955B33 /* PopcornTorrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922F43321CA37CF800955B33 /* PopcornTorrent.framework */; };
 		922F43421CA37CF800955B33 /* PopcornTorrentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 922F43411CA37CF800955B33 /* PopcornTorrentTests.m */; };
-		922F43581CA37E5100955B33 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 922F43571CA37E4B00955B33 /* libboost_filesystem.a */; };
-		922F43651CA37E6400955B33 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 922F43641CA37E6000955B33 /* libboost_system.a */; };
-		922F436C1CA37E6D00955B33 /* libtorrent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 922F436B1CA37E6800955B33 /* libtorrent.a */; };
 		922F438E1CA37EA100955B33 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 922F436F1CA37EA100955B33 /* Common.xcconfig */; };
 		922F438F1CA37EA100955B33 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 922F43711CA37EA100955B33 /* Debug.xcconfig */; };
 		922F43901CA37EA100955B33 /* Profile.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 922F43721CA37EA100955B33 /* Profile.xcconfig */; };
@@ -54,39 +53,19 @@
 			remoteGlobalIDString = 922F43311CA37CF800955B33;
 			remoteInfo = PopcornTorrent;
 		};
-		922F43561CA37E4B00955B33 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 922F43521CA37E4B00955B33 /* boost_filesystem.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 577CF12B1BEA117600AA21D6;
-			remoteInfo = boost_filesystem;
-		};
-		922F43631CA37E6000955B33 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 922F435F1CA37E6000955B33 /* boost_system.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 577CF1161BEA114900AA21D6;
-			remoteInfo = boost_system;
-		};
-		922F436A1CA37E6800955B33 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 922F43661CA37E6800955B33 /* torrent.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 577CF1401BEA11C400AA21D6;
-			remoteInfo = torrent;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07F7BA1C399C90EBC79C6BC0 /* libPods-PopcornTorrent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PopcornTorrent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		278C59032078B4436AC170B5 /* libPods-PopcornTorrentTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PopcornTorrentTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2793EB36C65A0E71040FCE29 /* Pods-PopcornTorrentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopcornTorrentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopcornTorrentTests/Pods-PopcornTorrentTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E0502E0944914EB6FEE2B4A /* Pods-PopcornTorrentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopcornTorrentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopcornTorrentTests/Pods-PopcornTorrentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		922F43321CA37CF800955B33 /* PopcornTorrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PopcornTorrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922F43351CA37CF800955B33 /* PopcornTorrent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopcornTorrent.h; sourceTree = "<group>"; };
 		922F43371CA37CF800955B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922F433C1CA37CF800955B33 /* PopcornTorrentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopcornTorrentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		922F43411CA37CF800955B33 /* PopcornTorrentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopcornTorrentTests.m; sourceTree = "<group>"; };
 		922F43431CA37CF800955B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		922F43521CA37E4B00955B33 /* boost_filesystem.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = boost_filesystem.xcodeproj; path = libtorrent/boost_filesystem/boost_filesystem.xcodeproj; sourceTree = "<group>"; };
-		922F435F1CA37E6000955B33 /* boost_system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = boost_system.xcodeproj; path = libtorrent/boost_system/boost_system.xcodeproj; sourceTree = "<group>"; };
-		922F43661CA37E6800955B33 /* torrent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = torrent.xcodeproj; path = libtorrent/torrent/torrent.xcodeproj; sourceTree = "<group>"; };
 		922F436F1CA37EA100955B33 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		922F43711CA37EA100955B33 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		922F43721CA37EA100955B33 /* Profile.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -118,6 +97,9 @@
 		922F43AD1CA37F0200955B33 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		922F43AE1CA37F0200955B33 /* CocoaSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaSecurity.h; sourceTree = "<group>"; };
 		922F43AF1CA37F0200955B33 /* CocoaSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaSecurity.m; sourceTree = "<group>"; };
+		92AB7BA91CA4E5F600685FBC /* liblibtorrent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibtorrent.a; path = "../../../../Library/Developer/Xcode/DerivedData/PopcornTorrent-clydngzraglbejfebqfzecrhbrzf/Build/Products/Debug-appletvos/liblibtorrent.a"; sourceTree = "<group>"; };
+		D9F08B9F67F4947C57E762C8 /* Pods-PopcornTorrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopcornTorrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopcornTorrent/Pods-PopcornTorrent.release.xcconfig"; sourceTree = "<group>"; };
+		F220AA9BD65B878FAB4F2A07 /* Pods-PopcornTorrent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopcornTorrent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopcornTorrent/Pods-PopcornTorrent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922F436C1CA37E6D00955B33 /* libtorrent.a in Frameworks */,
-				922F43651CA37E6400955B33 /* libboost_system.a in Frameworks */,
-				922F43581CA37E5100955B33 /* libboost_filesystem.a in Frameworks */,
+				6E5392DF8900FF49567F1FC3 /* libPods-PopcornTorrent.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,12 +116,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				922F433D1CA37CF800955B33 /* PopcornTorrent.framework in Frameworks */,
+				3EB27AFFC7F8C1522F8B6DC9 /* libPods-PopcornTorrentTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E2CD12BDC635A45AF0F2F86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92AB7BA91CA4E5F600685FBC /* liblibtorrent.a */,
+				07F7BA1C399C90EBC79C6BC0 /* libPods-PopcornTorrent.a */,
+				278C59032078B4436AC170B5 /* libPods-PopcornTorrentTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		922F43281CA37CF800955B33 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +140,8 @@
 				922F43341CA37CF800955B33 /* PopcornTorrent */,
 				922F43401CA37CF800955B33 /* PopcornTorrentTests */,
 				922F43331CA37CF800955B33 /* Products */,
+				D4CE223D504B8356730C2B95 /* Pods */,
+				8E2CD12BDC635A45AF0F2F86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,9 +157,6 @@
 		922F43341CA37CF800955B33 /* PopcornTorrent */ = {
 			isa = PBXGroup;
 			children = (
-				922F43521CA37E4B00955B33 /* boost_filesystem.xcodeproj */,
-				922F435F1CA37E6000955B33 /* boost_system.xcodeproj */,
-				922F43661CA37E6800955B33 /* torrent.xcodeproj */,
 				922F43A71CA37F0200955B33 /* Source */,
 				922F43351CA37CF800955B33 /* PopcornTorrent.h */,
 				922F43371CA37CF800955B33 /* Info.plist */,
@@ -181,30 +171,6 @@
 				922F43431CA37CF800955B33 /* Info.plist */,
 			);
 			path = PopcornTorrentTests;
-			sourceTree = "<group>";
-		};
-		922F43531CA37E4B00955B33 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				922F43571CA37E4B00955B33 /* libboost_filesystem.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		922F43601CA37E6000955B33 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				922F43641CA37E6000955B33 /* libboost_system.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		922F43671CA37E6800955B33 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				922F436B1CA37E6800955B33 /* libtorrent.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		922F436D1CA37EA100955B33 /* Config */ = {
@@ -325,6 +291,17 @@
 			path = Security;
 			sourceTree = "<group>";
 		};
+		D4CE223D504B8356730C2B95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F220AA9BD65B878FAB4F2A07 /* Pods-PopcornTorrent.debug.xcconfig */,
+				D9F08B9F67F4947C57E762C8 /* Pods-PopcornTorrent.release.xcconfig */,
+				5E0502E0944914EB6FEE2B4A /* Pods-PopcornTorrentTests.debug.xcconfig */,
+				2793EB36C65A0E71040FCE29 /* Pods-PopcornTorrentTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -346,10 +323,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922F43461CA37CF800955B33 /* Build configuration list for PBXNativeTarget "PopcornTorrent" */;
 			buildPhases = (
+				9FBBC67BCF480A380EE1DEC2 /* Check Pods Manifest.lock */,
 				922F432D1CA37CF800955B33 /* Sources */,
 				922F432E1CA37CF800955B33 /* Frameworks */,
 				922F432F1CA37CF800955B33 /* Headers */,
 				922F43301CA37CF800955B33 /* Resources */,
+				8F64C3A698CCB8AB3FFC2F22 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -364,9 +343,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922F43491CA37CF800955B33 /* Build configuration list for PBXNativeTarget "PopcornTorrentTests" */;
 			buildPhases = (
+				5EE75E05AB937BF14218E9A2 /* Check Pods Manifest.lock */,
 				922F43381CA37CF800955B33 /* Sources */,
 				922F43391CA37CF800955B33 /* Frameworks */,
 				922F433A1CA37CF800955B33 /* Resources */,
+				D986A1E89FBAE26ABBF93106 /* Embed Pods Frameworks */,
+				6DD91BC73497DB52E5406C1E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -405,20 +387,6 @@
 			mainGroup = 922F43281CA37CF800955B33;
 			productRefGroup = 922F43331CA37CF800955B33 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 922F43531CA37E4B00955B33 /* Products */;
-					ProjectRef = 922F43521CA37E4B00955B33 /* boost_filesystem.xcodeproj */;
-				},
-				{
-					ProductGroup = 922F43601CA37E6000955B33 /* Products */;
-					ProjectRef = 922F435F1CA37E6000955B33 /* boost_system.xcodeproj */;
-				},
-				{
-					ProductGroup = 922F43671CA37E6800955B33 /* Products */;
-					ProjectRef = 922F43661CA37E6800955B33 /* torrent.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				922F43311CA37CF800955B33 /* PopcornTorrent */,
@@ -426,30 +394,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		922F43571CA37E4B00955B33 /* libboost_filesystem.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libboost_filesystem.a;
-			remoteRef = 922F43561CA37E4B00955B33 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		922F43641CA37E6000955B33 /* libboost_system.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libboost_system.a;
-			remoteRef = 922F43631CA37E6000955B33 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		922F436B1CA37E6800955B33 /* libtorrent.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libtorrent.a;
-			remoteRef = 922F436A1CA37E6800955B33 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		922F43301CA37CF800955B33 /* Resources */ = {
@@ -492,6 +436,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EE75E05AB937BF14218E9A2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6DD91BC73497DB52E5406C1E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopcornTorrentTests/Pods-PopcornTorrentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F64C3A698CCB8AB3FFC2F22 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopcornTorrent/Pods-PopcornTorrent-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FBBC67BCF480A380EE1DEC2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D986A1E89FBAE26ABBF93106 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopcornTorrentTests/Pods-PopcornTorrentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		922F432D1CA37CF800955B33 /* Sources */ = {
@@ -613,12 +635,13 @@
 		};
 		922F43471CA37CF800955B33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F220AA9BD65B878FAB4F2A07 /* Pods-PopcornTorrent.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "${SRCROOT}/PopcornTorrent/include";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PopcornTorrent/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -630,12 +653,13 @@
 		};
 		922F43481CA37CF800955B33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9F08B9F67F4947C57E762C8 /* Pods-PopcornTorrent.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "${SRCROOT}/PopcornTorrent/include";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PopcornTorrent/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -647,6 +671,7 @@
 		};
 		922F434A1CA37CF800955B33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E0502E0944914EB6FEE2B4A /* Pods-PopcornTorrentTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PopcornTorrentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -657,6 +682,7 @@
 		};
 		922F434B1CA37CF800955B33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2793EB36C65A0E71040FCE29 /* Pods-PopcornTorrentTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PopcornTorrentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
