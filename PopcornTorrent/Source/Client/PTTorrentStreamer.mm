@@ -1,42 +1,40 @@
-#import "PopcornTorrent.h"
+#import "PTTorrentStreamer.h"
 #import <UIKit/UIKit.h>
 #import <string>
 #import <libtorrent/session.hpp>
 #import <libtorrent/alert.hpp>
 #import <libtorrent/alert_types.hpp>
-#import <CocoaSecurity/CocoaSecurity.h>
+#import "CocoaSecurity.h"
 
 using namespace libtorrent;
 
-@interface PopcornTorrent()
+@interface PTTorrentStreamer()
 @property (nonatomic, strong) dispatch_queue_t alertsQueue;
 @property (nonatomic, getter=isAlertsLoopActive) BOOL alertsLoopActive;
 @property (nonatomic, strong) NSString *savePath;
 @property (nonatomic, getter=isDownloading) BOOL downloading;
 @property (nonatomic, getter=isStreaming) BOOL streaming;
-@property (nonatomic, copy) PopcornTorrentProgress progressBlock;
-@property (nonatomic, copy) PopcornTorrentReadyToPlay readyToPlayBlock;
-@property (nonatomic, copy) PopcornTorrentFailure failureBlock;
+
+@property (nonatomic, copy) PTTorrentStreamerProgress progressBlock;
+@property (nonatomic, copy) PTTorrentStreamerReadyToPlay readyToPlayBlock;
+@property (nonatomic, copy) PTTorrentStreamerFailure failureBlock;
 @end
 
-@implementation PopcornTorrent
-{
+@implementation PTTorrentStreamer {
     session *_session;
     std::vector<int> required_pieces;
 }
 
-+ (instancetype)sharedStreamer
-{
++ (instancetype)sharedStreamer {
     static dispatch_once_t onceToken;
-    static PopcornTorrent *sharedStreamer;
+    static PTTorrentStreamer *sharedStreamer;
     dispatch_once(&onceToken, ^{
-        sharedStreamer = [[PopcornTorrent alloc] init];
+        sharedStreamer = [[PTTorrentStreamer alloc] init];
     });
     return sharedStreamer;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         [self setupSession];
@@ -46,8 +44,7 @@ using namespace libtorrent;
 
 #pragma mark - 
 
-+ (NSString *)downloadsDirectory
-{
++ (NSString *)downloadsDirectory {
     NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     NSString *downloadsDirectoryPath = [cachesPath stringByAppendingPathComponent:@"Downloads"];
     if (![[NSFileManager defaultManager] fileExistsAtPath:downloadsDirectoryPath]) {
@@ -64,8 +61,7 @@ using namespace libtorrent;
     return downloadsDirectoryPath;
 }
 
-- (void)setupSession
-{
+- (void)setupSession {
     error_code ec;
 
     _session = new session();
@@ -84,10 +80,9 @@ using namespace libtorrent;
 }
 
 - (void)startStreamingFromFileOrMagnetLink:(NSString *)filePathOrMagnetLink
-                                  progress:(PopcornTorrentProgress)progreess
-                               readyToPlay:(PopcornTorrentReadyToPlay)readyToPlay
-                                   failure:(PopcornTorrentFailure)failure;
-{
+                                  progress:(PTTorrentStreamerProgress)progreess
+                               readyToPlay:(PTTorrentStreamerReadyToPlay)readyToPlay
+                                   failure:(PTTorrentStreamerFailure)failure {
     self.progressBlock = progreess;
     self.readyToPlayBlock = readyToPlay;
     self.failureBlock = failure;
@@ -128,7 +123,7 @@ using namespace libtorrent;
     }
 
     NSString *halfMD5String = [MD5String substringToIndex:16];
-    self.savePath = [[PopcornTorrent downloadsDirectory] stringByAppendingPathComponent:halfMD5String];
+    self.savePath = [[PTTorrentStreamer downloadsDirectory] stringByAppendingPathComponent:halfMD5String];
     
     NSError *error;
     [[NSFileManager defaultManager] createDirectoryAtPath:self.savePath
@@ -153,8 +148,7 @@ using namespace libtorrent;
     self.downloading = YES;
 }
 
-- (void)cancelStreaming
-{
+- (void)cancelStreaming {
     if ([self isDownloading]) {
         self.alertsQueue = nil;
         self.alertsLoopActive = NO;
@@ -190,13 +184,11 @@ using namespace libtorrent;
 #define LIBTORRENT_PRIORITY_SKIP 0
 #define LIBTORRENT_PRIORITY_MAXIMUM 7
 
-- (void)alertsLoop
-{
+- (void)alertsLoop {
     std::deque<alert *> deque;
     time_duration max_wait = milliseconds(ALERTS_LOOP_WAIT_MILLIS);
     
-    while ([self isAlertsLoopActive])
-    {
+    while ([self isAlertsLoopActive]) {
         const alert *ptr = _session->wait_for_alert(max_wait);
         if (ptr != nullptr) {
             _session->pop_alerts(&deque);
@@ -207,6 +199,7 @@ using namespace libtorrent;
                     case metadata_received_alert::alert_type:
                         [self metadataReceivedAlert:(metadata_received_alert *)alert.get()];
                         break;
+                    
                     case block_finished_alert::alert_type:
                         [self pieceFinishedAlert:(piece_finished_alert *)alert.get()];
                         break;
@@ -222,8 +215,7 @@ using namespace libtorrent;
     }
 }
 
-- (void)prioritizeNextPieces:(torrent_handle)th
-{
+- (void)prioritizeNextPieces:(torrent_handle)th {
     int next_required_piece = required_pieces[MIN_PIECES-1]+1;
     required_pieces.clear();
     
@@ -238,8 +230,7 @@ using namespace libtorrent;
     }
 }
 
-- (void)processTorrent:(torrent_handle)th
-{
+- (void)processTorrent:(torrent_handle)th {
     if (![self isStreaming]) {
         self.streaming = YES;
         if (self.readyToPlayBlock) {
@@ -258,8 +249,7 @@ using namespace libtorrent;
     }
 }
 
-- (int)indexOfLargestFileInTorrent:(torrent_handle)th
-{
+- (int)indexOfLargestFileInTorrent:(torrent_handle)th {
     boost::intrusive_ptr<const torrent_info> ti = th.torrent_file();
     int files_count = ti->num_files();
     if (files_count > 1) {
@@ -279,30 +269,24 @@ using namespace libtorrent;
 
 #pragma mark - Logging
 
-- (void)logPiecesStatus:(torrent_handle)th
-{
+- (void)logPiecesStatus:(torrent_handle)th {
     NSString *pieceStatus = @"";
     boost::intrusive_ptr<const torrent_info> ti = th.torrent_file();
-    for(std::vector<int>::size_type i=0; i!=required_pieces.size(); i++) {
+    for (std::vector<int>::size_type i=0; i!=required_pieces.size(); i++) {
         int piece = required_pieces[i];
         pieceStatus = [pieceStatus stringByAppendingFormat:@"%d:%d ", piece, th.have_piece(piece)];
     }
     NSLog(@"%@", pieceStatus);
 }
 
-- (void)logTorrentStatus:(PTTorrentStatus)status
-{
-    NSString *speedString = [NSByteCountFormatter stringFromByteCount:status.downloadSpeed
-                                                           countStyle:NSByteCountFormatterCountStyleBinary];
-    NSLog(@"%.0f%%, %.0f%%, %@/s, %d, %d",
-          status.bufferingProgress*100, status.totalProgreess*100,
-          speedString, status.seeds, status.peers);
+- (void)logTorrentStatus:(PTTorrentStatus)status {
+    NSString *speedString = [NSByteCountFormatter stringFromByteCount:status.downloadSpeed countStyle:NSByteCountFormatterCountStyleBinary];
+    NSLog(@"%.0f%%, %.0f%%, %@/s, %d, %d", status.bufferingProgress*100, status.totalProgreess*100, speedString, status.seeds, status.peers);
 }
 
 #pragma mark - Alerts
 
-- (void)metadataReceivedAlert:(metadata_received_alert *)alert
-{
+- (void)metadataReceivedAlert:(metadata_received_alert *)alert {
     torrent_handle th = alert->handle;
     int file_index = [self indexOfLargestFileInTorrent:th];
 
@@ -332,8 +316,7 @@ using namespace libtorrent;
     }
 }
 
-- (void)pieceFinishedAlert:(piece_finished_alert *)alert
-{
+- (void)pieceFinishedAlert:(piece_finished_alert *)alert {
     torrent_handle th = alert->handle;
     torrent_status status = th.status();
     
@@ -373,8 +356,7 @@ using namespace libtorrent;
     }
 }
 
-- (void)torrentFinishedAlert:(torrent_finished_alert *)alert
-{
+- (void)torrentFinishedAlert:(torrent_finished_alert *)alert {
     [self processTorrent:alert->handle];
 }
 

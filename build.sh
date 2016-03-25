@@ -27,9 +27,9 @@ xcodeBuild()
   fi
 
   if [[ $usingBitcode == "YES" ]]; then
-    xcodebuild -workspace Libtorrent-rasterbar.xcworkspace ONLY_ACTIVE_ARCH=NO VALID_ARCHS="$archs" SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" ARCHS="$archs" OTHER_CFLAGS="-fembed-bitcode" -sdk "$1$SDKVERSION" -scheme PopcornTorrent clean build
+    xcodebuild -workspace PopcornTorrent.xcworkspace ONLY_ACTIVE_ARCH=NO VALID_ARCHS="$archs" SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" ARCHS="$archs" OTHER_CFLAGS="-fembed-bitcode" -sdk "$1$SDKVERSION" -scheme PopcornTorrent clean build
   else
-    xcodebuild -workspace Libtorrent-rasterbar.xcworkspace ONLY_ACTIVE_ARCH=NO VALID_ARCHS="$archs" SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" ARCHS="$archs" -sdk "$1$SDKVERSION" -scheme PopcornTorrent clean build
+    xcodebuild -workspace PopcornTorrent.xcworkspace ONLY_ACTIVE_ARCH=NO VALID_ARCHS="$archs" SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" ARCHS="$archs" -sdk "$1$SDKVERSION" -scheme PopcornTorrent clean build
   fi
 }
 
@@ -54,15 +54,15 @@ xcodeBuildTVOS()
   fi
 
   if [[ $usingBitcode == "YES" ]]; then
-    xcodebuild -workspace Libtorrent-rasterbar.xcworkspace ONLY_ACTIVE_ARCH=NO VALID_ARCHS="$archs" SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" ARCHS="$archs" OTHER_CFLAGS="-fembed-bitcode" -sdk "$1$TVOSSDKVERSION" -scheme PopcornTorrent clean build
+    xcodebuild -workspace PopcornTorrent.xcworkspace ONLY_ACTIVE_ARCH=NO VALID_ARCHS="$archs" SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" ARCHS="$archs" OTHER_CFLAGS="-fembed-bitcode" -sdk "$1$TVOSSDKVERSION" -scheme PopcornTorrent clean build
   else
-    xcodebuild -workspace Libtorrent-rasterbar.xcworkspace ONLY_ACTIVE_ARCH=NO VALID_ARCHS="$archs" SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" ARCHS="$archs" -sdk "$1$TVOSSDKVERSION" -scheme PopcornTorrent clean build
+    xcodebuild -workspace PopcornTorrent.xcworkspace ONLY_ACTIVE_ARCH=NO VALID_ARCHS="$archs" SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" ARCHS="$archs" -sdk "$1$TVOSSDKVERSION" -scheme PopcornTorrent clean build
   fi
 }
 
 buildTVDynamic()
 {
-    xcodebuild -workspace Libtorrent-rasterbar.xcworkspace ONLY_ACTIVE_ARCH=NO SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" -scheme PopcornTorrent clean build
+    xcodebuild -workspace PopcornTorrent.xcworkspace ONLY_ACTIVE_ARCH=NO SYMROOT="$pwd/output" -configuration Release ENABLE_BITCODE="$usingBitcode" -scheme PopcornTorrent clean build
 }
 
 buildFatForTVOS()

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:popcorntorrent/PopcornTorrent.xcodeproj">
+      location = "group:PopcornTorrent.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:boost_system/boost_system.xcodeproj">
