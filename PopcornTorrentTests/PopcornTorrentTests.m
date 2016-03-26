@@ -36,7 +36,7 @@
     [[PTTorrentStreamer sharedStreamer] startStreamingFromFileOrMagnetLink:@"magnet:?xt=urn:btih:75760737B063DDEBDB9D059A303420A4CCF6BC9F&dn=arrow+s01e19+hdtv+x264+lol+eztv&tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce" progress:^(PTTorrentStatus status) {
         
     } readyToPlay:^(NSURL *videoFileURL) {
-        
+        NSLog(@"%@", videoFileURL);
         [[PTTorrentStreamer sharedStreamer] cancelStreaming];
         XCTAssertNotNil(videoFileURL, @"No file URL");
         [expectation fulfill];

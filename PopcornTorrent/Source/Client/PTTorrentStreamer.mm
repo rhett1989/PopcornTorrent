@@ -331,7 +331,7 @@ using namespace libtorrent;
         }
     }
     
-    [self logPiecesStatus:th];
+//    [self logPiecesStatus:th];
     
     int requiredPieces = (int)required_pieces.size();
     float bufferingProgress = 1.0 - (requiredPieces-requiredPiecesDownloaded)/(float)requiredPieces;
