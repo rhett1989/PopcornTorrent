@@ -245,6 +245,10 @@ using namespace libtorrent;
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.readyToPlayBlock(fileURL);
             });
+            
+            // Remove the torrent when its finished
+            th.pause(false);
+            _session->remove_torrent(th);
         }
     }
 }

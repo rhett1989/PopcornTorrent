@@ -17,6 +17,12 @@
 		922F43B31CA37F0200955B33 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 922F43AD1CA37F0200955B33 /* Base64.m */; };
 		922F43B41CA37F0200955B33 /* CocoaSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = 922F43AE1CA37F0200955B33 /* CocoaSecurity.h */; };
 		922F43B51CA37F0200955B33 /* CocoaSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 922F43AF1CA37F0200955B33 /* CocoaSecurity.m */; };
+		92755CDE1CB1B3B700BCED5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92755CDD1CB1B3B700BCED5B /* AppDelegate.swift */; };
+		92755CE01CB1B3B700BCED5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92755CDF1CB1B3B700BCED5B /* ViewController.swift */; };
+		92755CE31CB1B3B700BCED5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92755CE11CB1B3B700BCED5B /* Main.storyboard */; };
+		92755CE51CB1B3B700BCED5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92755CE41CB1B3B700BCED5B /* Assets.xcassets */; };
+		92755CEA1CB1B3C600BCED5B /* PopcornTorrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922F43321CA37CF800955B33 /* PopcornTorrent.framework */; };
+		92755CEB1CB1B3C600BCED5B /* PopcornTorrent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922F43321CA37CF800955B33 /* PopcornTorrent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92AB7BD01CA5CF2100685FBC /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AB7BCD1CA5CF2100685FBC /* libboost_filesystem.a */; };
 		92AB7BD11CA5CF2100685FBC /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AB7BCE1CA5CF2100685FBC /* libboost_system.a */; };
 		92AB7BD21CA5CF2100685FBC /* libtorrent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AB7BCF1CA5CF2100685FBC /* libtorrent.a */; };
@@ -30,7 +36,28 @@
 			remoteGlobalIDString = 922F43311CA37CF800955B33;
 			remoteInfo = PopcornTorrent;
 		};
+		92755CEC1CB1B3C600BCED5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922F43291CA37CF800955B33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 922F43311CA37CF800955B33;
+			remoteInfo = PopcornTorrent;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92755CEE1CB1B3C600BCED5B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92755CEB1CB1B3C600BCED5B /* PopcornTorrent.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		07F7BA1C399C90EBC79C6BC0 /* libPods-PopcornTorrent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PopcornTorrent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +76,12 @@
 		922F43AD1CA37F0200955B33 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		922F43AE1CA37F0200955B33 /* CocoaSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaSecurity.h; sourceTree = "<group>"; };
 		922F43AF1CA37F0200955B33 /* CocoaSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaSecurity.m; sourceTree = "<group>"; };
+		92755CDB1CB1B3B700BCED5B /* PopcornTorrentTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopcornTorrentTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92755CDD1CB1B3B700BCED5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92755CDF1CB1B3B700BCED5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92755CE21CB1B3B700BCED5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92755CE41CB1B3B700BCED5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92755CE61CB1B3B700BCED5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92AB7BA91CA4E5F600685FBC /* liblibtorrent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibtorrent.a; path = "../../../../Library/Developer/Xcode/DerivedData/PopcornTorrent-clydngzraglbejfebqfzecrhbrzf/Build/Products/Debug-appletvos/liblibtorrent.a"; sourceTree = "<group>"; };
 		92AB7BCB1CA5AE8000685FBC /* liblibtorrent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibtorrent.a; path = "../../../../Library/Developer/Xcode/DerivedData/PopcornTorrent-clydngzraglbejfebqfzecrhbrzf/Build/Products/Debug-appletvsimulator/liblibtorrent.a"; sourceTree = "<group>"; };
 		92AB7BCD1CA5CF2100685FBC /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = "../../../../Library/Developer/Xcode/DerivedData/PopcornTorrent-clydngzraglbejfebqfzecrhbrzf/Build/Products/Debug-appletvos/libboost_filesystem.a"; sourceTree = "<group>"; };
@@ -78,6 +111,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92755CD81CB1B3B700BCED5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92755CEA1CB1B3C600BCED5B /* PopcornTorrent.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +141,7 @@
 			children = (
 				922F43341CA37CF800955B33 /* PopcornTorrent */,
 				922F43401CA37CF800955B33 /* PopcornTorrentTests */,
+				92755CDC1CB1B3B700BCED5B /* PopcornTorrentTestApp */,
 				922F43331CA37CF800955B33 /* Products */,
 				D4CE223D504B8356730C2B95 /* Pods */,
 				8E2CD12BDC635A45AF0F2F86 /* Frameworks */,
@@ -111,6 +153,7 @@
 			children = (
 				922F43321CA37CF800955B33 /* PopcornTorrent.framework */,
 				922F433C1CA37CF800955B33 /* PopcornTorrentTests.xctest */,
+				92755CDB1CB1B3B700BCED5B /* PopcornTorrentTestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +204,18 @@
 				922F43AF1CA37F0200955B33 /* CocoaSecurity.m */,
 			);
 			path = Security;
+			sourceTree = "<group>";
+		};
+		92755CDC1CB1B3B700BCED5B /* PopcornTorrentTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				92755CDD1CB1B3B700BCED5B /* AppDelegate.swift */,
+				92755CDF1CB1B3B700BCED5B /* ViewController.swift */,
+				92755CE11CB1B3B700BCED5B /* Main.storyboard */,
+				92755CE41CB1B3B700BCED5B /* Assets.xcassets */,
+				92755CE61CB1B3B700BCED5B /* Info.plist */,
+			);
+			path = PopcornTorrentTestApp;
 			sourceTree = "<group>";
 		};
 		D4CE223D504B8356730C2B95 /* Pods */ = {
@@ -227,12 +282,32 @@
 			productReference = 922F433C1CA37CF800955B33 /* PopcornTorrentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		92755CDA1CB1B3B700BCED5B /* PopcornTorrentTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92755CE71CB1B3B700BCED5B /* Build configuration list for PBXNativeTarget "PopcornTorrentTestApp" */;
+			buildPhases = (
+				92755CD71CB1B3B700BCED5B /* Sources */,
+				92755CD81CB1B3B700BCED5B /* Frameworks */,
+				92755CD91CB1B3B700BCED5B /* Resources */,
+				92755CEE1CB1B3C600BCED5B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92755CED1CB1B3C600BCED5B /* PBXTargetDependency */,
+			);
+			name = PopcornTorrentTestApp;
+			productName = PopcornTorrentTestApp;
+			productReference = 92755CDB1CB1B3B700BCED5B /* PopcornTorrentTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		922F43291CA37CF800955B33 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = PopcornTime;
 				TargetAttributes = {
@@ -240,6 +315,9 @@
 						CreatedOnToolsVersion = 7.3;
 					};
 					922F433B1CA37CF800955B33 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					92755CDA1CB1B3B700BCED5B = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -250,6 +328,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 922F43281CA37CF800955B33;
 			productRefGroup = 922F43331CA37CF800955B33 /* Products */;
@@ -258,6 +337,7 @@
 			targets = (
 				922F43311CA37CF800955B33 /* PopcornTorrent */,
 				922F433B1CA37CF800955B33 /* PopcornTorrentTests */,
+				92755CDA1CB1B3B700BCED5B /* PopcornTorrentTestApp */,
 			);
 		};
 /* End PBXProject section */
@@ -274,6 +354,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92755CD91CB1B3B700BCED5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92755CE51CB1B3B700BCED5B /* Assets.xcassets in Resources */,
+				92755CE31CB1B3B700BCED5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +387,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92755CD71CB1B3B700BCED5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92755CE01CB1B3B700BCED5B /* ViewController.swift in Sources */,
+				92755CDE1CB1B3B700BCED5B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -306,7 +404,23 @@
 			target = 922F43311CA37CF800955B33 /* PopcornTorrent */;
 			targetProxy = 922F433E1CA37CF800955B33 /* PBXContainerItemProxy */;
 		};
+		92755CED1CB1B3C600BCED5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 922F43311CA37CF800955B33 /* PopcornTorrent */;
+			targetProxy = 92755CEC1CB1B3C600BCED5B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92755CE11CB1B3B700BCED5B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92755CE21CB1B3B700BCED5B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		922F43441CA37CF800955B33 /* Debug */ = {
@@ -461,6 +575,31 @@
 			};
 			name = Release;
 		};
+		92755CE81CB1B3B700BCED5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = PopcornTorrentTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntime.PopcornTorrentTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92755CE91CB1B3B700BCED5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = PopcornTorrentTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntime.PopcornTorrentTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -490,6 +629,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		92755CE71CB1B3B700BCED5B /* Build configuration list for PBXNativeTarget "PopcornTorrentTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92755CE81CB1B3B700BCED5B /* Debug */,
+				92755CE91CB1B3B700BCED5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
