@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PopcornTorrent"
-  s.version          = "1.0.7"
+  s.version          = "1.0.8"
   s.summary          = "Torrent client for tvOS (Used by PopcornTime)"
   s.homepage         = "https://github.com/PopcornTimeTV/PopcornTorrent"
   s.license          = 'MIT'
