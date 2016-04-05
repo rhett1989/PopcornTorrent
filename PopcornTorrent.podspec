@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/PopcornTimeTV/PopcornTorrent"
   s.license          = 'MIT'
   s.author           = { "Popcorn" => "popcorn@time.tv" }
-  s.source           = { :http => "https://github.com/PopcornTimeTV/PopcornTorrent/releases/download/1.0.7/PopcornTorrent.framework.zip" }
+  s.source           = { :http => "https://github.com/PopcornTimeTV/PopcornTorrent/releases/download/1.0.8/PopcornTorrent.framework.zip" }
   s.requires_arc = true
   s.platform = :tvos
   s.tvos.deployment_target = '9.0'
