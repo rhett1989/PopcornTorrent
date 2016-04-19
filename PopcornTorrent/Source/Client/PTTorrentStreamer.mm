@@ -245,10 +245,6 @@ using namespace libtorrent;
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.readyToPlayBlock(fileURL);
             });
-            
-            // Remove the torrent when its finished
-            th.pause(false);
-            _session->remove_torrent(th);
         }
     }
 }
@@ -362,6 +358,11 @@ using namespace libtorrent;
 
 - (void)torrentFinishedAlert:(torrent_finished_alert *)alert {
     [self processTorrent:alert->handle];
+    
+    // Remove the torrent when its finished
+    torrent_handle th = alert->handle;
+    th.pause(false);
+    _session->remove_torrent(th);
 }
 
 @end
