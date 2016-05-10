@@ -75,7 +75,7 @@ using namespace libtorrent;
     settings.announce_to_all_tiers = true;
     settings.announce_to_all_trackers = true;
     settings.prefer_udp_trackers = false;
-    settings.max_peerlist_size = 0;
+    settings.max_peerlist_size = 10000;
     _session->set_settings(settings);
 }
 
@@ -179,7 +179,7 @@ using namespace libtorrent;
 #pragma mark - Alerts Loop
 
 #define ALERTS_LOOP_WAIT_MILLIS 500
-#define MIN_PIECES 15
+#define MIN_PIECES 45
 #define PIECE_DEADLINE_MILLIS 100
 #define LIBTORRENT_PRIORITY_SKIP 0
 #define LIBTORRENT_PRIORITY_MAXIMUM 7
@@ -342,7 +342,7 @@ using namespace libtorrent;
                                     status.upload_rate,
                                     status.num_seeds,
                                     status.num_peers};
-    [self logTorrentStatus:torrentStatus];
+//    [self logTorrentStatus:torrentStatus];
     
     if (self.progressBlock) {
         dispatch_async(dispatch_get_main_queue(), ^{
